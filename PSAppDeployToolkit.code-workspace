@@ -1,0 +1,48 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+	"settings": {
+		"files.defaultLanguage": "powershell",
+		"files.exclude": {
+			"**/.github": true,
+			"**/docs": true,
+			"**/Examples": true,
+			"**/material": true,
+			"**/Sources": true,
+			"**/Testing": true,
+			"**/wiki": true,
+			"**/.editorconfig": true,
+			"**/AppDeployToolkitLogo.png": true,
+			"**/CHANGELOG.txt": true,
+			"**/COPYING.Lesser": true,
+			"**/LICENSE": true,
+			"**/mkdocs.yml": true,
+			"**/PSAppDeployToolkit.pdf": true,
+			"**/README.md": true,
+			"**/TODO.txt": true
+		},
+		"powershell.codeFormatting.autoCorrectAliases": true,
+		"powershell.codeFormatting.trimWhitespaceAroundPipe": true,
+		"powershell.codeFormatting.useCorrectCasing": true,
+		"powershell.codeFormatting.preset": "Allman",
+		"powershell.codeFormatting.whitespaceBetweenParameters": true,
+		"editor.tabSize": 4,
+		"diffEditor.ignoreTrimWhitespace": false,
+		"editor.renderWhitespace": "all",
+		"files.trimTrailingWhitespace": true,
+		"powershell.enableProfileLoading": true,
+		"terminal.integrated.tabs.enabled": true,
+		"terminal.integrated.cwd": "${fileDirname}",
+		"terminal.integrated.profiles.windows": {
+			"PowerShell NoProfile": {
+				"source":"PowerShell",
+				"args": ["-NoProfile","-NoLogo","-ExecutionPolicy","Bypass"]
+			},
+			"Git Bash": null,
+		},
+		"terminal.integrated.defaultProfile.windows": "PowerShell"
+	}
+}
