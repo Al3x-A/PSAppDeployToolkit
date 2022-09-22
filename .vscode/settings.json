@@ -29,7 +29,8 @@
                 "-NoLogo",
                 "-NoExit",
                 "-ExecutionPolicy",
-                "RemoteSigned"
+                "RemoteSigned",
+                "Import-Module oh-my-posh;Set-Theme qwerty"
             ]
         },
         "Git Bash": null,
