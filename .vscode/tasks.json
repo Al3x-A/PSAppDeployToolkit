@@ -41,11 +41,15 @@
                 "-ExecutionPolicy",
                 "Bypass",
                 "-File",
-                "${cwd}/Toolkit/AppDeployToolkit/AppDeployToolkitHelp.ps1"
+                "${cwd}\\Toolkit\\AppDeployToolkit\\AppDeployToolkitHelp.ps1"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
+            },
+            "presentation": {
+                "reveal": "silent",
+                "close": true
             }
         }
     ]
