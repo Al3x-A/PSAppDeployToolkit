@@ -119,7 +119,7 @@ Try {
     ##*===============================================
     ## Variables: Install Titles (Only set here to override defaults set by the toolkit)
     [String]$installName = 'Zoom Meetings'
-    [String]$installTitle = ''
+    [String]$installTitle = 'Zoom Meetings'
 
     ##* Do not modify section below
     #region DoNotModify
@@ -182,7 +182,7 @@ Try {
         [String]$installPhase = 'Pre-Installation'
 
 		## TODO Show Welcome Message, close Internet Explorer if required, allow up to 3 deferrals, verify there is enough disk space to complete the install, and persist the prompt
-		Show-InstallationWelcome -CloseApps 'iexplore' -AllowDefer -DeferTimes 3 -CheckDiskSpace -PersistPrompt
+		Show-InstallationWelcome -CloseApps 'zoom' -AllowDefer -DeferTimes 3 -CheckDiskSpace -PersistPrompt
 
 		## TODO Show Progress Message (with the default message)
 		Show-InstallationProgress
@@ -206,6 +206,7 @@ Try {
         }
 
 		## TODO <Perform Installation tasks here>
+        Execute-MSI -Action 'Install' -Path 'ZoomInstallerFull.msi' -Parameters  '/qn' '/norestart' 'ZoomAutoUpdate="true"' 'ZSSOHOST="emerson.zoom.us"' 'ZConfig="AutoSSOLogin=1;nofacebook=1;DisableLoginWithEmail=1"'
 
 
         ##*===============================================
@@ -217,7 +218,7 @@ Try {
 
         ## Display a message at the end of the install
         If (-not $useDefaultMsi) {
-            Show-InstallationPrompt -Message 'You can customize text to appear at the end of an install or remove it completely for unattended installations.' -ButtonRightText 'OK' -Icon Information -NoWait
+            Show-InstallationPrompt -Message 'Zoom is now installed on your computer.' -ButtonRightText 'OK' -Icon Information -NoWait
         }
     }
     ElseIf ($deploymentType -ieq 'Uninstall') {
@@ -226,8 +227,8 @@ Try {
         ##*===============================================
         [String]$installPhase = 'Pre-Uninstallation'
 
-		## TODO Show Welcome Message, close Internet Explorer with a 60 second countdown before automatically closing
-		Show-InstallationWelcome -CloseApps 'iexplore' -CloseAppsCountdown 60
+		## TODO Show Welcome Message, close Zoom with a 60 second countdown before automatically closing
+		Show-InstallationWelcome -CloseApps 'zoom' -CloseAppsCountdown 60
 
 		## TODO Show Progress Message (with the default message)
 		Show-InstallationProgress
