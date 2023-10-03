@@ -107,18 +107,18 @@ Try {
     ##* VARIABLE DECLARATION
     ##*===============================================
     ## Variables: Application
-    [String]$appVendor = ''
-    [String]$appName = ''
-    [String]$appVersion = ''
+    [String]$appVendor = 'PS-Zoom Video Communications, Inc'
+    [String]$appName = 'Zoom'
+    [String]$appVersion = '5.15.1'
     [String]$appArch = ''
     [String]$appLang = 'EN'
     [String]$appRevision = '01'
     [String]$appScriptVersion = '1.0.0'
-    [String]$appScriptDate = 'XX/XX/20XX'
-    [String]$appScriptAuthor = '<author name>'
+    [String]$appScriptDate = '10/03/2023'
+    [String]$appScriptAuthor = 'Andres Abreu'
     ##*===============================================
     ## Variables: Install Titles (Only set here to override defaults set by the toolkit)
-    [String]$installName = ''
+    [String]$installName = 'Zoom Meetings'
     [String]$installTitle = ''
 
     ##* Do not modify section below
